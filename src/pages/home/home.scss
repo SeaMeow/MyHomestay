@@ -1,0 +1,32 @@
+page-home {
+	ul {
+		padding: 0px;
+		margin: 0px;
+		&.rating li {
+			padding: 0px 5px !important;
+			background: none;
+			color: #ffb400;
+			ion-icon {
+				font-size: 20px;
+			}
+		}
+	}
+	.icon-color{
+		color: color($colors,light-blue-6);
+	}
+	.card-title{
+		margin-top: 45px;
+	}
+	.custom-card{
+		box-shadow:0 1px 2px rgba(0, 0, 0, 0.3); 
+		border-radius: 2px; 
+		background: white;
+	}
+	.card {
+		width: 80vw;
+	}
+	.button-md{
+		text-transform:none; 
+	}
+}
+

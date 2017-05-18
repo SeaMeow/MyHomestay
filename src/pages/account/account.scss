@@ -1,0 +1,40 @@
+page-account {
+	.account-header{
+		background-image: url("/assets/img/homestay1.jpg");
+		height: 30vh;
+	}
+	.overlay{
+		color: white;
+		background-color: rgba(0, 0, 0, 0.6);
+		height: 100%;
+	}
+	ion-col .img-circle{
+		background-color: gainsboro;
+		height: 12vh !important;
+		width: 12vh !important;
+	}
+	.overlay ion-row{
+		height: 100%;
+		width: 100%;
+		display: table;
+	}
+	ion-col{
+		display: table-cell;
+  		vertical-align: middle;
+	}
+	.account-tab{
+		background-color: white;
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+	.tabs-button{
+		border-radius: 50%;
+		height: 40px;
+		width: 40px;
+		margin-bottom: 3px;
+	}
+	.account-tab span{
+		font-size: 12px;
+		color: grey;
+	}
+}

@@ -1,0 +1,133 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>
+			<h4>My Homestay</h4>
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content class="bg-style">
+	<div>
+		<img src="assets/img/ads.jpg">
+	</div>
+	<ion-row padding-left padding-right class="vertical-align-content">
+		<ion-col col-8 text-left>
+			<h3 no-margin>Top Homestays!</h3>
+		</ion-col>
+		<ion-col col-4 style="color: #03A9F4;">
+			<button ion-button clear>See More <i class="fa fa-angle-right" style="margin-left:5px;"></i></button>
+		</ion-col>
+	</ion-row>
+	<ion-slides loop autoplay="5000" slidesPerView="2" spaceBetween="240" style="height: initial;">
+		<ion-slide *ngFor="let h of homes; let i=index" >
+			<ion-card style="min-height: 100%;">
+				<div class="wrapper">
+					<img src="assets/img/{{h.image}}.jpg"/>
+					<div class="card-avatar">
+						<img class="img-circle" src="assets/img/{{h.user}}"/>
+					</div>
+					<div  margin-right>
+						<h2 class="card-price">{{h.price}}</h2>
+					</div>
+					<div>
+						<h2 class="card-discount">-25%</h2>
+					</div>
+				</div>
+				<ion-card-title padding-left padding-right class="card-title">
+					<h2>{{h.title}}</h2>
+					<p>{{h.location}}</p>
+				</ion-card-title>
+				<ion-row padding-left padding-right>
+					<ion-col col-8>
+						<rating [(ngModel)]="homes[i].rate"
+						readOnly="true" 
+						max="5" 
+						emptyStarIconName="star-outline" 
+						halfStarIconName="star-half" 
+						starIconName="star" 
+						nullable="false">
+						</rating>
+					</ion-col >
+					<ion-col col-4 text-right>
+						<ion-note>
+							{{h.reviews}} Reviews
+						</ion-note>
+					</ion-col>
+				</ion-row>
+
+				<ion-row padding>
+					<ion-col col-8>
+						<span class="icon-color" margin-right>
+							<i class="fa fa-bed"></i>
+							{{h.rooms}}
+						</span>
+						<span class="icon-color" margin-right>
+							<i class="fa fa-users"></i>
+							{{h.accomodate}}
+						</span>
+						<span class="icon-color">
+							<i class="fa fa-bath"></i>
+							{{h.bathrooms}}
+						</span>
+					</ion-col>
+					<ion-col text-right col-4>
+						<ion-note>
+							11 Hrs Ago
+						</ion-note>
+					</ion-col>
+				</ion-row>
+			</ion-card>
+		</ion-slide>
+	</ion-slides>
+	<div padding-left padding-right>
+		<h3>Search By Category</h3>
+	</div>
+	<ion-row padding center text-center>
+		<ion-col col-4>
+			<div class="custom-card" padding>
+				<div>
+					<i class="fa fa-home fa-2x"></i>
+				</div>
+				<p>house</p>
+			</div>
+		</ion-col>
+		<ion-col col-4>
+			<div class="custom-card" padding>
+				<div>
+					<i class="fa fa-home fa-2x"></i>
+				</div>
+				<p>house</p>
+			</div>
+		</ion-col>
+		<ion-col col-4>
+			<div class="custom-card" padding>
+				<div>
+					<i class="fa fa-home fa-2x"></i>
+				</div>
+				<p>house</p>
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row padding center text-center>
+		<ion-col col-4>
+			<div>
+				<i class="fa fa-lock fa-3x"></i>
+			</div>
+			<p>Data Protection</p>
+		</ion-col>
+		<ion-col col-4>
+			<div>
+				<i class="fa fa-handshake-o fa-3x"></i>
+			</div>
+			<p>Trusted Owners</p>
+		</ion-col>
+		<ion-col col-4>
+			<div>
+				<i class="fa fa-credit-card fa-3x"></i>
+			</div>
+			<p>Secure Online Payment</p>
+		</ion-col>
+	</ion-row>
+</ion-content>

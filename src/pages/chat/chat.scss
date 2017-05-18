@@ -1,0 +1,28 @@
+page-chat {
+	.SKactiveSegment
+	{
+		color:color($colors,light-blue-6) !important;
+	}
+	.indicatorSegment
+	{
+		-webkit-transition: 0.3s all;
+		-moz-transition:  0.3s all;
+		-o-transition:  0.3s all;
+		transition:  0.3s all;
+		transform-origin: top 0 left 0;
+		width:50%;
+		height:2px;
+		background-color: color($colors,light-blue-6) !important;;
+	}
+	.swiper-slide {
+		align-items: flex-start !important;
+	}
+	.test h2{
+		display: inline-block;
+	}
+	.test ion-note{
+		float: right;
+		font-size: 12px;
+
+	}
+}
